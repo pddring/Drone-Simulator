@@ -18,6 +18,8 @@ public class RotateWithKeys : MonoBehaviour {
     public float maxRotation;
     public float minRotation;
 
+    public bool springy;
+
     /// <summary>
     /// Angle to apply when the key is pressed
     /// </summary>
@@ -48,6 +50,11 @@ public class RotateWithKeys : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if(springy && (Input.GetKeyUp(increaseKey) || Input.GetKeyUp(decreaseKey)))
+        {
+            Reset();
+        }
+
         if(Input.GetKey(increaseKey))
         {
             if(angle + currentRotation < maxRotation  )
