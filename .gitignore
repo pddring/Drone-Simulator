@@ -8,6 +8,8 @@
 *.sln.docstates
 
 metadata/
+ScriptAssemblies/
+ShaderCache/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
