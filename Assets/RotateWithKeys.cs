@@ -17,8 +17,12 @@ public class RotateWithKeys : MonoBehaviour {
 
     public float maxRotation;
     public float minRotation;
-
     public bool springy;
+
+    public Controller controller;
+    public Controller.Direction direction;
+    public Controller.Side side;
+    public bool invertValue;
 
     /// <summary>
     /// Angle to apply when the key is pressed
@@ -50,9 +54,11 @@ public class RotateWithKeys : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        bool changed = false;
         if(springy && (Input.GetKeyUp(increaseKey) || Input.GetKeyUp(decreaseKey)))
         {
             Reset();
+            changed = true;
         }
 
         if(Input.GetKey(increaseKey))
@@ -61,8 +67,8 @@ public class RotateWithKeys : MonoBehaviour {
             {
                 transform.Rotate(axis, angle);
                 currentRotation += angle;
+                changed = true;
             }
-            
         }
 
         if (Input.GetKey(decreaseKey))
@@ -71,14 +77,24 @@ public class RotateWithKeys : MonoBehaviour {
             {
                 transform.Rotate(axis, -angle);
                 currentRotation -= angle;
+                changed = true;
             } 
         }
 
         if(Input.GetKeyDown(resetKey))
         {
             Reset();
+            changed = true;
         }
 
-
+        if(changed)
+        {
+            float value = ((currentRotation - minRotation) / (maxRotation - minRotation)) - 0.5f;
+            if (invertValue == true)
+            {
+                value *= -1f;
+            }
+            controller.SetJoystick(side, direction, value);
+        }
     }
 }

@@ -7,6 +7,11 @@
 *.userosscache
 *.sln.docstates
 
+il2cpp_cache/
+Managed/
+webgl/
+webgl_cache/
+*cache*
 ScriptAssemblies/
 ShaderCache/
 *.blend1
