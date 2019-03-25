@@ -366,7 +366,7 @@ Camera:
   m_GameObject: {fileID: 282840810}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -594,6 +594,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 93.45496, y: 17.616625, z: 85.03998}
   m_Center: {x: 0.37482262, y: -6.3083124, z: -0.879128}
+--- !u!114 &673718569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 673718563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6e95660287b6143929e8f27d8cdfbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetKey: 114
+  resetPosition: {x: 0, y: 15, z: 0}
 --- !u!1001 &694496057
 Prefab:
   m_ObjectHideFlags: 0
@@ -607,7 +620,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0d3c3d7fc924cec428d9adb123650408, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.62
+      value: 13.37
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0d3c3d7fc924cec428d9adb123650408, type: 3}
       propertyPath: m_LocalPosition.z
@@ -847,11 +860,11 @@ MonoBehaviour:
   minDistance: 10
   minAltitude: 1
   positions:
-  - {x: 0, y: 0, z: 20}
-  - {x: 0, y: 0, z: 40}
-  - {x: 10, y: 0, z: 20}
-  - {x: -10, y: 0, z: 10}
-  - {x: 0, y: 0, z: 10}
+  - {x: 0, y: 0, z: 50}
+  - {x: 50, y: 0, z: 50}
+  - {x: 0, y: 0, z: 50}
+  - {x: -50, y: 0, z: 0}
+  - {x: -50, y: 0, z: 50}
 --- !u!4 &1166628967 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400012, guid: 0d3c3d7fc924cec428d9adb123650408, type: 3}
@@ -906,6 +919,14 @@ Prefab:
     - target: {fileID: 400000, guid: 73279dd5393f0a146ae06b604eb0bfeb, type: 3}
       propertyPath: m_LocalScale.z
       value: 12.255738
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 73279dd5393f0a146ae06b604eb0bfeb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 73279dd5393f0a146ae06b604eb0bfeb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.363
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73279dd5393f0a146ae06b604eb0bfeb, type: 3}
