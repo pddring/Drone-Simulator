@@ -224,6 +224,7 @@
     <Compile Include="Assets\DistanceBetween.cs" />
     <Compile Include="Assets\Fly.cs" />
     <Compile Include="Assets\LookAt.cs" />
+    <Compile Include="Assets\Reset.cs" />
     <Compile Include="Assets\RotateWithKeys.cs" />
     <Compile Include="Assets\ToggleWithKey.cs" />
     <Compile Include="Assets\WayPoint.cs" />
